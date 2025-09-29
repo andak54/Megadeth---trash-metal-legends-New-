@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Андріан">
+  <meta name="description" content="Самостійна робота">
+  <title>Megadeth — треш-метал легенди</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icos/megadeth.ico" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<video id="bg-video" class="bg-video" autoplay muted loop>
+  <source src="backgroundvideos/main.mp4" type="video/mp4">
+</video>
+<button id="toggle-sound-btn" class="toggle-sound-btn">Увімкнути звук</button>
+   <div class="page-content">
+<header>
+  <div class="logo fade-in">
+    <a href="index.html">
+    <img src="otherpictures/logo.png" alt="Лого">
+    </a>
+  </div>
+
+  <div class="menu-btn fade-in" id="menu-btn">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav class="menu fade-in" id="menu">
+    <a href="index.html">Головна</a>
+      <div class="dropdown" id="albums-dropdown">
+      <a href="albums.html" class="dropbtn">Альбоми ▼</a>
+      <div class="dropdown-content">
+        <a href="album1.html">Killing Is My Business... and Business Is Good!</a>
+        <a href="album2.html">Peace Sells... but Who’s Buying?</a>
+        <a href="album3.html">So Far, So Good... So What!</a>
+        <a href="album4.html">Rust in Peace</a>
+        <a href="album5.html">Countdown to Extinction</a>
+        <a href="album6.html">Youthanasia</a>
+        <a href="album7.html">Cryptic Writings</a>
+        <a href="album8.html">Risk</a>
+        <a href="album9.html">The World Needs a Hero</a>
+        <a href="album10.html">The System Has Failed</a>
+        <a href="album11.html">United Abominations</a>
+        <a href="album12.html">Endgame</a>
+        <a href="album13.html">Th1rt3en</a>
+        <a href="album14.html">Super Collider</a>
+        <a href="album15.html">Dystopia</a>
+        <a href="album16.html">The Sick, the Dying... and the Dead!</a>
+      </div>
+    </div>
+    <a href="members.html">Склад гурту</a>
+    <a href="about.html">Про мене</a>
+  </nav>
+</header>
+
+
+<main>
+  <div class="band-info fade-in">
+    <div class="text">
+      <h1>Про Megadeth</h1>
+      <p>Megadeth — американський треш-метал-гурт, заснований у 1983 році в Лос-Анджелесі гітаристом і вокалістом Дейвом Мастейном після його звільнення з Metallica. Мастейн обрав назву гурту, натхнену терміном "megadeath" (мільйон загиблих), що стосується ядерної зброї.</p>
+      <p>Їхній дебютний альбом Killing Is My Business... and Business Is Good! вийшов у 1985 році, але справжній прорив стався з релізом Peace Sells... but Who’s Buying? у 1986 році. Цей альбом приніс гурту популярність у метал-середовищі та закріпив їхній статус серед "Великої четвірки" треш-металу разом з Metallica, Slayer та Anthrax.</p>
+      <p>З того часу Megadeth випустили низку успішних альбомів, серед яких Rust in Peace (1990) та Countdown to Extinction (1992). Їхня музика відома технічно складними гітарними партіями, швидким темпом і соціально-політичною лірикою. Вони стали одними з основоположників жанру та значно вплинули на розвиток метал-музики.</p>
+      <p>У серпні 2025 року Дейв Мастейн оголосив, що наступний, 17-й студійний альбом Megadeth, а також прощальний світовий тур у 2026 році стануть останніми в кар'єрі гурту. Він підкреслив, що хоче завершити історію Megadeth на високій ноті, залишаючи сцену на піку популярності.</p>
+      <a href="https://open.spotify.com/artist/1Yox196W7bzVNZI7RBaPnf?si=66en9GSVREWyw8yOWeeW-g" class="btn btn-danger black-border-btn" target="_blank" rel="noopener noreferrer">Слухати Megadeth</a>
+    </div>
+    <div class="photo">
+      <audio id="sound">
+      <source src="audios/watchhimbecomeagod.mp3" type="audio/mpeg">
+      </audio>
+      <div class="photo-inner">
+      <img id="dave-img" src="otherpictures/mustaine.jpg" alt="Мастейн">
+      <div class="photo-text">Дейв Мастейн - фронтмен, співзасновник гурту і незмінний учасник</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="round-widget fade-in">
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-ad6e1617-9001-49c1-b4a0-a7e2a8a62b13" data-elfsight-app-lazy></div>
+<div class="form-container">
+  <h2>Зворотній зв'язок</h2>
+  <form action="send_mail.php" method="POST" class="contact-form">
+    <label for="name">Ім'я</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Повідомлення</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Відправити</button>
+  </form>
+</div>
+</div>
+
+<footer class="site-footer fade-in">
+  <p>© 2025 Мій сайт. Всі права захищені.</p>
+  <p>
+    Email: <a href="mailto:andrian.saviak.pp@lpnu.ua">andrian.saviak.pp.2024@lpnu.ua</a> | 
+    Телефон: <a href="tel:+38 097 119 31 34">+38 097 119 31 34</a>
+  </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</div>
+</html>
