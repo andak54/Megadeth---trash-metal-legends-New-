@@ -68,6 +68,7 @@ header {
   visibility: hidden;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
 }
 
 .dropdown-content a {
@@ -835,4 +836,5 @@ h2 {
   background-color: black;    
   color: white !important;   
   text-decoration: none;
+
 }
