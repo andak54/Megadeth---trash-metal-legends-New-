@@ -1,3 +1,4 @@
+/* Загальні стилі сторінки: відступи, шрифт, фон та колір тексту */
 body {
   margin: 0;
   font-family: Russo One;
@@ -5,6 +6,7 @@ body {
   color: white;
 }
 
+/* Верхній колонтитул: флекс-контейнер, вирівнювання, відступи, фон та позиціонування */
 header {
   display: flex;
   justify-content: space-between;
@@ -12,12 +14,15 @@ header {
   padding: 10px 20px;
   background: #111;
   position: relative;
+  z-index: 10000;
 }
 
+/* Логотип: висота зображення */
 .logo img {
   height: 40px;
 }
 
+/* Кнопка меню для мобільного: прихована за замовчуванням, вертикальні смужки */
 .menu-btn {
   display: none;
   flex-direction: column;
@@ -27,18 +32,21 @@ header {
   cursor: pointer;
 }
 
+/* Стилізація смужок кнопки меню: висота, колір та скруглення */
 .menu-btn div {
   height: 4px;
   background: white;
   border-radius: 2px;
 }
 
+/* Основне меню навігації: флекс-контейнер, відступи між елементами */
 .menu {
   display: flex;
   gap: 20px;
   align-items: center; 
 }
 
+/* Стилі для посилань меню та кнопок випадаючого меню: колір, відступи, анімація переходу */
 .menu a, .dropbtn {
   color: white;
   text-decoration: none;
@@ -47,15 +55,18 @@ header {
   display: inline-block; 
 }
 
+/* Ефект наведення для посилань меню та кнопок випадаючого меню */
 .menu a:hover, .dropbtn:hover {
   background: #444;
   border-radius: 6px;
 }
 
+/* Контейнер для випадаючого меню: позиціонування відносно батьківського елементу */
 .dropdown {
   position: relative;
 }
 
+/* Вміст випадаючого меню: абсолютне позиціонування, приховане за замовчуванням, анімація появи */
 .dropdown-content {
   position: absolute;
   top: 100%;
@@ -67,9 +78,11 @@ header {
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
+  z-index: 9999;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Посилання всередині випадаючого меню: блоковий елемент, відступи, колір, роздільники */
 .dropdown-content a {
   display: block;
   padding: 10px 15px;
@@ -78,24 +91,27 @@ header {
   border-bottom: 1px solid #333;
 }
 
+/* Ефект наведення на посилання у випадаючому меню */
 .dropdown-content a:hover {
   background: #333;
   color: #ff0000;
 }
 
+/* Клас для відображення випадаючого меню з анімацією */
 .dropdown-content.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-
+/* Основний контент сторінки: флекс-контейнер, центроване вирівнювання та відступи */
 main {
   display: flex;
   justify-content: center;
   padding: 50px 20px;
 }
 
+/* Блок інформації про гурт: флекс-контейнер, обгортка, фон, скруглення та відступи */
 .band-info {
   display: flex;
   flex-wrap: wrap;
@@ -108,15 +124,18 @@ main {
   color: black;
 }
 
+/* Текстова частина інформації про гурт: флекс-розтяжка та мінімальна ширина */
 .band-info .text {
   flex: 1;
   min-width: 250px;
 }
 
+/* Заголовок текстової частини гурту: прибраний верхній відступ */
 .band-info .text h1 {
   margin-top: 0;
 }
 
+/* Кнопка з чорним контуром: рамка, скруглення, колір фону та тексту, відступи, анімація */
 .black-border-btn {
   border: 2px solid black;   
   border-radius: 12px;       
@@ -128,12 +147,14 @@ main {
   transition: 0.3s;          
 }
 
+/* Ефект наведення для кнопки з чорним контуром */
 .black-border-btn:hover {
   background-color: black;    
   color: white !important;   
   text-decoration: none;
 }
 
+/* Фотографія гурту: флекс-розтяжка, центроване розташування, скруглення та приховане переповнення */
 .band-info .photo {
   flex: 1;
   min-width: 250px;
@@ -145,12 +166,13 @@ main {
   border-radius: 12px; 
 }
 
+/* Внутрішній контейнер фотографії: приховане переповнення та скруглення */
 .band-info .photo .photo-inner {
  overflow: hidden;      
   border-radius: 12px;  
 }
 
-
+/* Зображення гурту: блоковий елемент, ширина 100%, скруглення та анімація трансформації */
 .band-info .photo img {
   display: block;
   width: 100%;
@@ -159,11 +181,13 @@ main {
   transition: transform 0.3s ease, filter 0.3s ease; 
 }
 
+/* Ефект наведення на фотографію гурту: збільшення та затемнення */
 .band-info .photo:hover img {
   transform: scale(1.05); 
   filter: brightness(0.9); 
 }
 
+/* Підпис під фотографією: вирівнювання тексту, відступ та колір */
 .band-info .photo .caption {
    text-align: center;
   margin-top: 8px;
@@ -171,6 +195,7 @@ main {
   color: #333;
 }
 
+/* Округлий віджет: скруглення, приховане переповнення та максимальна ширина */
 .round-widget {
   border-radius: 20px; 
   overflow: hidden;    
@@ -178,6 +203,7 @@ main {
   margin: 0 auto; 
 }
 
+/* Конвертер квитків: фон, скруглення, відступи, тінь, вирівнювання тексту та колір */
 .ticket-converter {
   background: #fff;
   border-radius: 15px;
@@ -191,21 +217,25 @@ main {
   transition: transform 0.3s ease;
 }
 
+/* Масштабування конвертера (синтаксис має бути без пробілу) */
 .ticket-converter {
-transform: scale (1.05);
+transform: scale(1.05);
 }
 
+/* Заголовок конвертера: розмір шрифту та колір */
 .ticket-converter h2 {
   font-size: 1.8em;
   margin-bottom: 10px;
   color: #222;
 }
 
+/* Параграфи конвертера: відступи та колір */
 .ticket-converter p {
   margin: 10px 0;
   color: #555;
 }
 
+/* Поля введення конвертера: ширина, відступи, рамка, скруглення та шрифт */
 .ticket-converter input {
   padding: 10px;
   width: 60%;
@@ -216,6 +246,7 @@ transform: scale (1.05);
   font-family: Russo One;
 }
 
+/* Кнопки конвертера: стиль, фон, колір, скруглення, курсор, анімація */
 .ticket-converter button {
   padding: 10px 20px;
   font-size: 1em;
@@ -228,10 +259,12 @@ transform: scale (1.05);
   font-family: Russo One;
 }
 
+/* Ефект наведення кнопок конвертера */
 .ticket-converter button:hover {
   background: #555;
 }
 
+/* Списки конвертера: вирівнювання тексту та відступи */
 .ticket-converter ul {
   text-align: left;
   margin-top: 15px;
@@ -239,6 +272,7 @@ transform: scale (1.05);
   color: #444;
 }
 
+/* Результат конвертера: відступ зверху, товщина шрифту та розмір */
 .ticket-converter #result {
   margin-top: 15px;
   font-weight: bold;
@@ -246,6 +280,7 @@ transform: scale (1.05);
   color: #111;
 }
 
+/* Кнопка отримання квитка: відступи, колір фону та тексту, скруглення, анімація */
 .ticket-converter .ticket-btn {
   display: inline-block;
   margin-top: 15px;
@@ -257,10 +292,12 @@ transform: scale (1.05);
   transition: background 0.3s;
 }
 
+/* Ефект наведення на кнопку отримання квитка */
 .ticket-converter .ticket-btn:hover {
   background: #222;
 }
 
+/* Підвал сайту: фон, колір тексту, вирівнювання, відступи та розмір шрифту */
 .site-footer {
   background-color: #111;    
   color: #fff;                
@@ -268,31 +305,34 @@ transform: scale (1.05);
   padding: 20px;          
   position: relative;       
   bottom: 0;
-
   font-size: 14px;
 }
 
+/* Посилання підвалу: колір та відступи */
 .site-footer a {
   color: #fff;
   text-decoration: none;      
   margin: 0 5px;
 }
 
+/* Ефект наведення на посилання підвалу */
 .site-footer a:hover {
   text-decoration: underline;  
 }
 
+/* Ефект появи елементів: початкова прозорість та зсув вниз */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
 }
 
+/* Клас для анімації появи: повна видимість та повернення на місце */
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
 }
-
+/* Контейнер альбомів: максимальна ширина, відступи, фон, колір, скруглення та тінь */
 .albums-container {
   max-width: 1000px;
   margin: 50px auto;
@@ -303,28 +343,33 @@ transform: scale (1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Заголовок секції альбомів: центрований текст та нижній відступ */
 .albums-header {
   text-align: center;
   margin-bottom: 30px;
 }
 
+/* Основний заголовок альбомів: шрифт та відступи */
 .albums-header h1 {
   margin: 0;
   font-size: 32px;
 }
 
+/* Підзаголовок секції альбомів: відступи та колір тексту */
 .albums-header p {
   margin: 5px 0 0 0;
   font-size: 18px;
   color: #555;
 }
 
+/* Сітка альбомів: 4 колонки та відступи між елементами */
 .albums-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
+/* Окремий альбом: блоковий елемент, вирівнювання тексту, скруглення та анімація */
 .album {
   display: block;               
   text-align: center;
@@ -335,6 +380,7 @@ transform: scale (1.05);
   text-decoration: none;        
 }
 
+/* Зображення альбому: ширина 100%, блоковий елемент, скруглення та анімація */
 .album img {
   width: 100%;
   display: block;
@@ -342,21 +388,24 @@ transform: scale (1.05);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* Підпис під зображенням альбому: відступ зверху та шрифт */
 .album p {
   margin-top: 8px;
   font-size: 14px;
 }
 
-/* Hover ефект */
+/* Ефект наведення на зображення альбому: збільшення та підсвітка */
 .album:hover img {
   transform: scale(1.05);         
   filter: brightness(1.1);         
 }
 
+/* Ефект наведення на весь альбом: тінь */
 .album:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* Основний контейнер для альбому: фон, колір, скруглення, відступи, тінь та анімація */
 .album-container {
   background-color: white;
   color: black;
@@ -368,6 +417,7 @@ transform: scale (1.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Заголовок альбому: центрований текст, розмір шрифту та жирність */
 .album-title {
   text-align: center;
   font-size: 2em;
@@ -375,27 +425,32 @@ transform: scale (1.05);
   margin-bottom: 20px;
 }
 
+/* Контент альбому: флекс-контейнер, відступи між елементами, обгортка */
 .album-content {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
+/* Інформація про альбом: флекс-розтяжка та мінімальна ширина */
 .album-info {
   flex: 1;
   min-width: 250px;
 }
 
+/* Параграфи інформації про альбом: міжрядковий інтервал */
 .album-info p {
   line-height: 1.5;
 }
 
+/* Плейлист альбому: флекс-розтяжка, мінімальна ширина, анімація трансформації */
 .album-playlist {
   flex: 1;
   min-width: 250px;
   transition: transform 0.3s ease;
 }
 
+/* Вбудований плеєр: ширина 100%, висота, скруглення та без рамки */
 .album-playlist iframe {
   width: 100%;
   height: 380px;
@@ -403,33 +458,41 @@ transform: scale (1.05);
   border: none;
 }
 
+/* Ефект наведення на плейлист альбому: масштабування */
 .album-playlist:hover {
   transform: scale(1.05);
 }
 
+/* Відео альбому: відступ зверху та центрований текст */
 .album-video {
   margin-top: 40px;
   text-align: center;
 }
 
+/* Заголовок відео альбому: нижній відступ */
 .album-video h3 {
   margin-bottom: 10px;
 }
 
+/* Вбудоване відео альбому: анімація трансформації та тіні */
 .album-video iframe {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Ефект наведення на відео альбому: підйом та тінь */
 .album-video iframe:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
+/* Навігація між альбомами: флекс-контейнер, простір між кнопками */
 .album-navigation {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
+/* Кнопки навігації: відступи, фон, колір, скруглення, анімація */
 .nav-btn {
   padding: 10px 20px;
   background: #222;
@@ -439,11 +502,13 @@ transform: scale (1.05);
   transition: 0.2s;
 }
 
+/* Ефект наведення на кнопки навігації: зміна фону та підйом */
 .nav-btn:hover {
   background: #444;
   transform: translateY(-5px);
 }
 
+/* Приховані кнопки попереднього/наступного альбому */
 .hiddenprev-btn {
   padding: 10px 20px;
   background: #fff;
@@ -454,6 +519,7 @@ transform: scale (1.05);
   background: #fff;
 }
 
+/* Контейнер про гурт: фон, колір, максимальна ширина, відступи, скруглення та тінь */
 .about-container {
   background: white;
   color: black;
@@ -464,12 +530,14 @@ transform: scale (1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* Заголовок секції про гурт: центрований текст, розмір шрифту, нижній відступ */
 .about-title {
   text-align: center;
   font-size: 2.5em;
   margin-bottom: 30px;
 }
 
+/* Контент про гурт: флекс-контейнер, відступи між елементами, обгортка */
 .about-content {
   display: flex;
   gap: 20px;
@@ -477,6 +545,7 @@ transform: scale (1.05);
   margin-bottom: 30px;
 }
 
+/* Фото про гурт: флекс-розтяжка, центроване розташування */
 .about-photo {
   flex: 1;
   min-width: 250px;
@@ -485,6 +554,7 @@ transform: scale (1.05);
   align-items: center;
 }
 
+/* Зображення про гурт: розмір, скруглення, об'єктна адаптація, тінь та анімація */
 .about-photo img {
   width: 200px;
   height: 200px;
@@ -494,24 +564,29 @@ transform: scale (1.05);
   transition: transform 0.3s ease, filter 0.3s ease; 
 }
 
+/* Ефект наведення на фото гурту: масштабування та затемнення */
 .about-photo img:hover {
   transform: scale(1.05); 
   filter: brightness(0.9); 
 }
 
+/* Інформація про гурт: флекс-розтяжка та мінімальна ширина */
 .about-info {
   flex: 2;
   min-width: 250px;
 }
 
+/* Вбудовані плеєри про гурт: анімація трансформації */
 .about-music iframe {
   transition: transform 0.3s ease;
 }
 
+/* Ефект наведення на плеєр про гурт: масштабування */
 .about-music iframe:hover{
   transform: scale(1.02);
 }
 
+/* Сітка фото про гурт: 3 колонки, відступи та нижній відступ */
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -519,6 +594,7 @@ transform: scale (1.05);
   margin-bottom: 30px;
 }
 
+/* Кожна фотографія у сітці: позиціонування, курсор, приховане переповнення та скруглення */
 .photo-item {
   position: relative;
   cursor: pointer;
@@ -526,16 +602,19 @@ transform: scale (1.05);
   border-radius: 20px;
 }
 
+/* Зображення у сітці: ширина 100%, блоковий елемент, анімація трансформації */
 .photo-item img {
   width: 100%;
   display: block;
   transition: transform 0.3s ease;
 }
 
+/* Ефект наведення на фото у сітці: масштабування */
 .photo-item:hover img {
   transform: scale(1.05);
 }
 
+/* Текст на фотографії: абсолютне позиціонування, фон з прозорістю, вирівнювання та анімація */
 .photo-text {
   position: absolute;
   bottom: 0;
@@ -548,70 +627,94 @@ transform: scale (1.05);
   transition: opacity 0.3s ease;
 }
 
+/* Ефект наведення на текст фотографії: прояв тексту */
 .photo-item:hover .photo-text {
   opacity: 1;
 }
 
+/* Сітка відео: 3 колонки, відступи */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
+/* Відео елементи: ширина 100%, блоковий елемент, скруглення */
 .video-item video {
   width: 100%;
   display: block;
   border-radius: 20px;
 }
 
+/* Контейнер карти: нижній відступ */
 .about-map {
   margin-bottom: 20px;
 }
 
+/* Вбудована карта: скруглення, анімація трансформації та тіні */
 .about-map iframe {
   border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Ефект наведення на карту: підйом та тінь */
 .about-map iframe:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
-.social-links {
+/* Ряд соціальних посилань: флекс-контейнер та верхній відступ */
+.social-links-row {
+  display: flex;
   margin-top: 20px;
 }
 
-.social-links p {
+/* Підпис для соціальних посилань: нижній відступ та жирність */
+.social-links-row p {
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-.social-links a {
-  display: inline-flex;          
-  align-items: center;
-  margin-right: 20px;
+/* Посилання соціальних мереж: відображення, відступи, розмір шрифту, колір та відсутність підкреслення */
+.social-links-row a {
+   display: inline-block;
+  margin: 10px;
+  font-size: 20px;
+  color: black; 
   text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  transition: color 0.3s;
 }
 
-.social-links a img {
-  width: 24px;   
-  height: 24px;
-  margin-right: 8px;
-  transition: transform 0.3s ease;
+/* Анімація кольору та розміру при наведені на Telegram, TikTok та Instagram */
+.social-links-row .telegram a, 
+.social-links-row .tiktok a,
+.social-links-row .instagram a {
+ transition: color 0.3s ease;
+ transition: transform 0.3s ease;
 }
 
-.social-links a:hover {
-  color: #0077ff; 
+/* Ефекти наведення на соціальні мережі: зміна кольору, зближення */
+.social-links-row .telegram a:hover {
+  color: blue;
+  transform: scale(1.05);
 }
 
-.social-links a:hover img {
-  transform: scale(1.2); 
+.social-links-row .tiktok a:hover {
+  color: #2af0ea;
+  transform: scale(1.05);
 }
 
- .contact-form-container {
+.social-links-row .instagram a:hover {
+  color: #feda75;
+  transform: scale(1.05);
+}
+
+/* Іконки у соціальних посиланнях: відступ праворуч */
+.social-links-row i {
+  margin-right: 8px; 
+}
+
+/* Контейнер контактної форми: максимальна ширина, відступи, фон, скруглення та тінь */
+.contact-form-container {
   max-width: 500px;
   margin: 50px auto;
   padding: 30px;
@@ -623,10 +726,12 @@ transform: scale (1.05);
   transition: transform 0.3s ease;
 }
 
+/* Ефект наведення на контейнер контактної форми: масштабування */
 .contact-form-container:hover  {
   transform: scale(1.05);
 }
 
+/* Заголовок контактної форми: центрований текст, відступ, розмір шрифту та колір */
 .contact-form-container h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -634,12 +739,14 @@ transform: scale (1.05);
   color: #222;
 }
 
+/* Форма контактної форми: флекс-контейнер, вертикальне розташування, центроване вирівнювання */
 .contact-form-container form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Поля введення та текстові області: ширина, відступи, рамка, скруглення, фон, шрифт та анімація */
 .contact-form-container input,
 .contact-form-container textarea {
   width: 90%;
@@ -656,6 +763,7 @@ transform: scale (1.05);
   font-family: Russo One;
 }
 
+/* Ефект фокусу на полях та текстових областях */
 .contact-form-container input:focus,
 .contact-form-container textarea:focus {
   border-color: #999;
@@ -663,6 +771,7 @@ transform: scale (1.05);
   outline: none;
 }
 
+/* Кнопка відправки контактної форми: ширина, відступи, фон, колір, скруглення, шрифт, курсор та анімація */
 .contact-form-container button {
   width: 100%;
   padding: 12px;
@@ -676,11 +785,13 @@ transform: scale (1.05);
   font-family: Russo One;
 }
 
+/* Ефект наведення на кнопку контактної форми */
 .contact-form-container button:hover {
   background-color: #000;
   color: #fff;
 }
 
+/* Адаптивне меню для екранів до 1000px: ховає основне меню, робить його вертикальним та анімованим */
 @media (max-width: 1000px) {
   .menu {
     display: none;
@@ -697,20 +808,24 @@ transform: scale (1.05);
     z-index: 9999;
   }
 
+  /* Кнопка меню стає видимою на маленьких екранах */
   .menu-btn {
     display: flex;
   }
   
+  /* Вирівнювання контенту про гурт вертикально на малих екранах */
   .about-content {
     flex-direction: column;
     align-items: center;
   }
 
+  /* Центрування тексту в інформаційній частині про гурт */
   .about-info {
     text-align: center;
   }
 }
 
+/* Фонове відео: фіксоване положення, повна ширина та висота, покриття екрану, фільтри та нижній рівень z-index */
 .bg-video {
   position: fixed;    
   top: 0;
@@ -722,6 +837,7 @@ transform: scale (1.05);
   filter: blur(8px) brightness(0.7); 
 }
 
+/* Основний контент сторінки: відносне позиціонування для шару над відео, колір тексту та мінімальна висота */
 .page-content {
   position: relative;
   z-index: 1;
@@ -729,6 +845,7 @@ transform: scale (1.05);
   min-height: 100vh;
 }
 
+/* Кнопка включення/вимкнення звуку: фіксоване положення, відступи від країв, фон з прозорістю, колір, курсор, шрифт та анімація */
 .toggle-sound-btn {
   position: fixed;
   bottom: 20px; 
@@ -745,10 +862,12 @@ transform: scale (1.05);
   font-family: Russo One;
 }
 
+/* Ефект наведення на кнопку звуку: збільшення прозорості фону */
 .toggle-sound-btn:hover {
   background: rgba(0,0,0,0.8);
 }
 
+/* Основний контейнер для контенту: ширина 90%, максимальна ширина, відступи, фон, скруглення, тінь та центрований текст */
 .container {
   width: 90%;       
   max-width: 1000px;       
@@ -761,16 +880,19 @@ transform: scale (1.05);
   text-align: center;
 }
 
+/* Основний заголовок h1: розмір шрифту та нижній відступ */
 h1 {
   font-size: 48px;
   margin-bottom: 20px;
 }
 
+/* Заголовок h2: розмір шрифту та верхній/нижній відступ */
 h2 {
   font-size: 28px;
   margin: 40px 0 20px 0;
 }
 
+/* Секції учасників гурту: сітка, відступи між елементами, центроване вирівнювання та нижній відступ */
 .founders, .current-members, .former-members {
   display: grid;
   gap: 20px;
@@ -778,29 +900,35 @@ h2 {
   margin: 0 auto 40px auto;   
 }
 
+/* Засновники: дві колонки по 200px */
 .founders {
   grid-template-columns: repeat(2, 200px);
 }
 
+/* Окремий учасник: центрований текст */
 .member {
   text-align: center;
 }
 
+/* Зображення учасника: ширина 100%, скруглення, анімація трансформації та тіні */
 .member img {
   width: 100%;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Ефект наведення на зображення учасника: підйом та тінь */
 .member img:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
+/* Поточні учасники: 4 колонки по 220px */
 .current-members {
   grid-template-columns: repeat(4, 220px);
 }
 
+/* Колишні учасники: 3 колонки з автоматичною шириною, відступи та центроване вирівнювання */
 .former-members {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
@@ -809,12 +937,14 @@ h2 {
   margin: 0 auto 40px auto;  
 }
 
+/* Колонки колишніх учасників: фон, скруглення та відступи */
 .former-members .column {
   background: #f0f0f0; 
   border-radius: 10px;
   padding: 15px;
 }
 
+/* Окремий колишній учасник: жирний шрифт, відступи, рамка, скруглення, фон, колір тексту та центрований текст */
 .former-members .member {
   font-weight: bold;
   padding: 10px;
@@ -825,10 +955,12 @@ h2 {
   text-align: center; 
 }
 
+/* Колонки: анімація трансформації */
 .column {
   transition: 0.3s;          
 }
 
+/* Ефект наведення на колонку: підйом, тінь, змінений фон та колір тексту */
 .column:hover {
  transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.3);

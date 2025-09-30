@@ -2,30 +2,50 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
+  <!-- Автор та опис -->
   <meta name="author" content="Андріан">
   <meta name="description" content="Самостійна робота">
+  
+  <!-- Заголовок вкладки -->
   <title>Megadeth — треш-метал легенди</title>
+  
+  <!-- Підключення CSS -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Підключення шрифтів -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Іконка сайту -->
   <link rel="icon" href="icos/megadeth.ico" type="image/x-icon">
+  
+  <!-- jQuery (для скриптів) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+<!-- Відео-фон -->
 <video id="bg-video" class="bg-video" autoplay muted loop>
   <source src="backgroundvideos/main.mp4" type="video/mp4">
 </video>
+
+<!-- Кнопка для вмикання/вимикання звуку -->
 <button id="toggle-sound-btn" class="toggle-sound-btn">Увімкнути звук фону</button>
-   <div class="page-content">
+
+<!-- Основний контейнер сторінки -->
+<div class="page-content">
+
+<!-- Шапка сайту -->
 <header>
+  <!-- Логотип -->
   <div class="logo fade-in">
     <a href="index.html">
-    <img src="otherpictures/logo.png" alt="Лого">
+      <img src="otherpictures/logo.png" alt="Лого">
     </a>
   </div>
 
+  <!-- Кнопка меню (для мобільної версії) -->
   <div class="menu-btn fade-in" id="menu-btn">
     <div></div>
     <div></div>
@@ -33,9 +53,12 @@
     <div></div>
   </div>
 
+  <!-- Головне меню -->
   <nav class="menu fade-in" id="menu">
     <a href="index.html">Головна</a>
     <a href="members.html">Склад гурту</a>
+    
+    <!-- Випадаюче меню для альбомів -->
     <div class="dropdown" id="albums-dropdown">
       <a href="albums.html" class="dropbtn">Альбоми ▼</a>
       <div class="dropdown-content">
@@ -57,57 +80,68 @@
         <a href="album16.html">The Sick, the Dying... and the Dead!</a>
       </div>
     </div>
+    
     <a href="about.html">Про мене</a>
   </nav>
 </header>
 
 
+<!-- Основний вміст -->
 <main>
   <div class="band-info fade-in">
     <div class="text">
-      <h1>Про Megadeth</h1>
+      <!-- Інформація про гурт -->
+       <h1>Про Megadeth</h1>
       <p>Megadeth — американський треш-метал-гурт, заснований у 1983 році в Лос-Анджелесі гітаристом і вокалістом Дейвом Мастейном після його звільнення з Metallica. Мастейн обрав назву гурту, натхнену терміном "megadeath" (мільйон загиблих), що стосується ядерної зброї.</p>
       <p>Їхній дебютний альбом Killing Is My Business... and Business Is Good! вийшов у 1985 році, але справжній прорив стався з релізом Peace Sells... but Who’s Buying? у 1986 році. Цей альбом приніс гурту популярність у метал-середовищі та закріпив їхній статус серед "Великої четвірки" треш-металу разом з Metallica, Slayer та Anthrax.</p>
       <p>З того часу Megadeth випустили низку успішних альбомів, серед яких Rust in Peace (1990) та Countdown to Extinction (1992). Їхня музика відома технічно складними гітарними партіями, швидким темпом і соціально-політичною лірикою. Вони стали одними з основоположників жанру та значно вплинули на розвиток метал-музики.</p>
       <p>У серпні 2025 року Дейв Мастейн оголосив, що наступний, 17-й студійний альбом Megadeth, а також прощальний світовий тур у 2026 році стануть останніми в кар'єрі гурту. Він підкреслив, що хоче завершити історію Megadeth на високій ноті, залишаючи сцену на піку популярності.</p>
+      
+      <!-- Кнопка на Spotify -->
       <a href="https://open.spotify.com/artist/1Yox196W7bzVNZI7RBaPnf?si=66en9GSVREWyw8yOWeeW-g" class="btn btn-danger black-border-btn" target="_blank" rel="noopener noreferrer">Слухати Megadeth</a>
     </div>
+    
+    <!-- Фото + аудіо -->
     <div class="photo">
       <audio id="sound">
-      <source src="audios/watchhimbecomeagod.mp3" type="audio/mpeg">
+        <source src="audios/watchhimbecomeagod.mp3" type="audio/mpeg">
       </audio>
       <div class="photo-inner">
-      <img id="dave-img" src="otherpictures/mustaine.jpg" alt="Мастейн">
+        <img id="dave-img" src="otherpictures/mustaine.jpg" alt="Мастейн">
       </div>
       <p class="caption">Дейв Мастейн - фронтмен і засновник гурту</p>
     </div>
 
+    <!-- Конвертер квитків -->
     <div class="ticket-converter">
-  <h2>Перевірте вартість квитків на прощальний тур Megadeth "Killing Road"</h2>
-  <p>Введіть суму в USD, щоб дізнатися її еквівалент у гривнях:</p>
-  <input id="amount" type="number" placeholder="Сума в USD">
-  <button id="convert">Перевести</button>
-  <p id="result"></p>
-  <h3>Перевірити актуальні ціни на офіційному сайті:</h3>
-  <a href="https://www.megadeth.com/tour" target="_blank" class="ticket-btn">Перейти на офіційну сторінку про тур</a>
-</div>
+      <h2>Перевірте вартість квитків...</h2>
+      <p>Введіть суму в USD...</p>
+      <input id="amount" type="number" placeholder="Сума в USD">
+      <button id="convert">Перевести</button>
+      <p id="result"></p>
+      
+      <h3>Перевірити актуальні ціни...</h3>
+      <a href="https://www.megadeth.com/tour" target="_blank" class="ticket-btn">Перейти на офіційну сторінку про тур</a>
+    </div>
   </div>
 </main>
 
+<!-- Віджет -->
 <div class="round-widget fade-in">
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-ad6e1617-9001-49c1-b4a0-a7e2a8a62b13" data-elfsight-app-lazy></div>
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-ad6e1617-9001-49c1-b4a0-a7e2a8a62b13" data-elfsight-app-lazy></div>
 </div>
 
+<!-- Футер -->
 <footer class="site-footer fade-in">
   <p>© 2025 Мій сайт. Всі права захищені.</p>
   <p>
-    Email: <a href="mailto:andrian.saviak.pp@lpnu.ua">andrian.saviak.pp.2024@lpnu.ua</a> | 
+    Email: <a href="mailto:andrian.saviak.pp.2024@lpnu.ua">andrian.saviak.pp.2024@lpnu.ua</a> | 
     Телефон: <a href="tel:+38 097 119 31 34">+38 097 119 31 34</a>
   </p>
 </footer>
 
+<!-- Підключення JS -->
 <script src="script.js"></script>
 </body>
-</div>
 </html>

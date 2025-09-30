@@ -2,38 +2,61 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
+  <!-- Автор та опис -->
+  <meta name="author" content="Андріан">
+  <meta name="description" content="Самостійна робота">
+
+  <!-- Заголовок вкладки -->
   <title>Killing Is My Business... and Business Is Good!</title>
+
+  <!-- Підключення шрифтів -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Підключення CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Іконка сайту -->
   <link rel="icon" href="icos/1albumcover.ico" type="image/x-icon">
+
+  <!-- jQuery (для скриптів) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
+  <!-- Відео-фон -->
 <video id="bg-video" class="bg-video" autoplay muted loop>
   <source src="backgroundvideos/main.mp4" type="video/mp4">
 </video>
+
+<!-- Шапка сайту -->
 <header>
+  <!-- Логотип -->
   <div class="logo fade-in">
     <a href="index.html">
     <img src="otherpictures/logo.png" alt="Лого">
     </a>
   </div>
 
-  <div class="menu-btn fade-in" id="menu-btn">
+  <!-- Кнопка меню (для мобільної версії) -->
+ <div class="menu-btn fade-in" id="menu-btn">
     <div></div>
     <div></div>
     <div></div>
     <div></div>
   </div>
 
-  <nav class="menu fade-in" id="menu">
+  <!-- Головне меню -->
+ <nav class="menu fade-in" id="menu">
     <a href="index.html">Головна</a>
     <a href="members.html">Склад гурту</a>
+    
+    <!-- Випадаюче меню для альбомів -->
     <div class="dropdown" id="albums-dropdown">
       <a href="albums.html" class="dropbtn">Альбоми ▼</a>
       <div class="dropdown-content">
+        <a href="album1.html">Killing Is My Business... and Business Is Good!</a>
         <a href="album2.html">Peace Sells... but Who’s Buying?</a>
         <a href="album3.html">So Far, So Good... So What!</a>
         <a href="album4.html">Rust in Peace</a>
@@ -55,9 +78,12 @@
   </nav>
 </header>
 
+<!-- Основний вміст -->
 <main>
   <div class="album-container fade-in">
+    <!-- Назва альбому -->
     <div class="album-title fade-in">Killing Is My Business... and Business Is Good!</div>
+    <!-- Блок з інформацією про альбом -->
     <div class="album-content fade-in">
       <div class="album-info">
         <p><strong>Жанр:</strong> Треш-метал</p>
@@ -66,10 +92,12 @@
         <p>Альбом <strong><i>"Killing Is My Business... and Business Is Good!"</i></strong> — дебютний студійний альбом американського треш-метал гурту Megadeth, випущений 12 червня 1985 року. Записаний на обмежений бюджет, він став важливим етапом у розвитку жанру треш-метал, демонструючи швидкість, агресивність і технічну майстерність, що стали його характерними рисами.</p>
         <p>Хоча альбом мав обмежений бюджет і був записаний з деякими технічними недоліками, він отримав позитивні відгуки критиків і став важливим етапом у розвитку треш-металу. Він заклав основи для подальших успіхів Megadeth і вплинув на формування метал-сцени 1980-х років.</p>
       </div>
+      <!-- Плейлист із Spotify -->
       <div class="album-playlist" id="playlist">
         <iframe src="https://open.spotify.com/embed/album/0TFQuO4m3XR5pTJCFS88Qk?si=ulZ32tXyTPGXAfvJovw65w" allow="encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
+    <!-- Відео з YouTube -->
     <div class="album-video fade-in">
     <h3>Лайв виконання однієї з пісень</h3>
     <iframe width="560" height="315" 
@@ -79,7 +107,7 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
 </iframe>
-</div>
+<!-- Кнопки переходу між альбомами -->
   <div class="album-navigation fade-in">
   <a href="" class="nav-btn prev-btn hiddenprev-btn"></a>
   <a href="album2.html" class="nav-btn next-btn">Peace Sells... but Who’s Buying? →</a>
@@ -88,13 +116,16 @@
   </div>  
 </main>
   
+<!-- Футер -->
 <footer class="site-footer fade-in">
   <p>© 2025 Мій сайт. Всі права захищені.</p>
   <p>
-    Email: <a href="mailto:andrian.saviak.pp@lpnu.ua">andrian.saviak.pp.2024@lpnu.ua</a> | 
+    Email: <a href="mailto:andrian.saviak.pp.2024@lpnu.ua">andrian.saviak.pp.2024@lpnu.ua</a> | 
     Телефон: <a href="tel:+38 097 119 31 34">+38 097 119 31 34</a>
   </p>
 </footer>
 
+<!-- Підключення JS -->
 <script src="script.js"></script>
 </body>
+</html>

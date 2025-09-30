@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+  <meta charset="UTF-8">
+  <!-- Автор та опис -->
+  <meta name="author" content="Андріан">
+  <meta name="description" content="Самостійна робота">
+
+  <!-- Заголовок вкладки -->
   <title>Про мене</title>
+
+  <!-- Підключення шрифтів -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Підключення іконкових шрифтів -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Підключення CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Іконка сайту -->
   <link rel="icon" href="icos/me.ico" type="image/x-icon">
+
+  <!-- jQuery (для скриптів) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+  <!-- Відео-фон -->
 <video id="bg-video" class="bg-video" autoplay muted loop>
-  <source src="backgroundvideos/aboutme.AVI" type="video/mp4">
+  <source src="backgroundvideos/main.mp4" type="video/mp4">
 </video>
+
+<!-- Шапка сайту -->
 <header>
+  <!-- Логотип -->
   <div class="logo fade-in">
     <a href="index.html">
     <img src="otherpictures/logo.png" alt="Лого">
     </a>
   </div>
 
-  <div class="menu-btn fade-in" id="menu-btn">
+  <!-- Кнопка меню (для мобільної версії) -->
+ <div class="menu-btn fade-in" id="menu-btn">
     <div></div>
     <div></div>
     <div></div>
     <div></div>
   </div>
 
+  <!-- Головне меню -->
  <nav class="menu fade-in" id="menu">
     <a href="index.html">Головна</a>
     <a href="members.html">Склад гурту</a>
+    
+    <!-- Випадаюче меню для альбомів -->
     <div class="dropdown" id="albums-dropdown">
       <a href="albums.html" class="dropbtn">Альбоми ▼</a>
       <div class="dropdown-content">
@@ -56,9 +81,12 @@
   </nav>
 </header>
 
+<!-- Основний вміст -->
 <main>
     <div class="about-container fade-in">
+      <!-- Заголовок сторінки -->
       <h1 class="about-title fade-in">Про мене</h1>
+      <!-- Блок з фото та інформацією -->
       <div class="about-content fade-in">
         <div class="about-photo">
           <img src="otherpictures/me.jpg" alt="Моя фотографія">
@@ -69,20 +97,30 @@
           <p>Навчаюсь я на другому курсі у Національному Університеті "Львівській Політехніці" на спеціальності Комп'ютерні науки (Проєктування та програмування інтелектуальних систем та пристроїв). Моїм улюбленим заняття є гра на електрогітарі, це приносить мені задоволення та тимчасове заспокоєння на душі.</p>
         </div>
       </div>
+      <!-- Посилання на соцмережі -->
       <div class="social-links fade-in">
-  <h3>Посилання на мої соц.мережі:</h3>
+<h3>Посилання на мої соц.мережі:</h3>
+<div class="social-links-row">
+  <div class="telegram">
   <a href="https://t.me/andak_541" target="_blank">
-    <img src="socmedialogos/telegram.png" alt="Telegram"> Telegram
+    <i class="fa-brands fa-telegram"></i> Telegram
   </a>
+  </div>
+  <div class="tiktok">
   <a href="https://www.tiktok.com/@andak_541?_t=ZM-8zWiASvueRB" target="_blank">
-    <img src="socmedialogos/tiktok.png" alt="TikTok"> TikTok
+    <i class="fa-brands fa-tiktok"></i> TikTok
   </a>
+  </div>
+  <div class="instagram">
   <a href="https://www.instagram.com/andak541?igsh=aWRjcm96cDYyMnh6&utm_source=qr" target="_blank">
-    <img src="socmedialogos/instagram.png" alt="Instagram"> Instagram
+    <i class="fa-brands fa-instagram"></i> Instagram
   </a>
+  </div>
 </div>
+<!-- Улюблені пісні -->
       <div class="about-music fade-in">
         <h2>Мої улюблені пісні від гурту Megadeth:</h2>
+        <!-- Вбудовані плеєри Spotify -->
         <iframe src="https://open.spotify.com/embed/track/0ZW18ZiiQaup5PMoaVUmDz?si=P2EracQWQs2irxF3nj9tOA&context=spotify%3Asearch%3Aa%2Btou" width="49%" height="100" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
     <iframe src="https://open.spotify.com/embed/track/4E5xVW505akJX0wcKj8Mpd?si=bUeSYsULSi6Q2dCFdv6miQ&context=spotify%3Asearch%3Atornado" width="49%" height="100" frameborder="0"allow="encrypted-media" allowfullscreen></iframe>
     <iframe src="https://open.spotify.com/embed/track/3CI1JP2ooMBSFjIy1u6Yrc?si=VwACRZCKQIKvUsF25NFJ9A&context=spotify%3Asearch%3Aangru%2Bagain" width="49%" height="100" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
@@ -98,6 +136,7 @@
     <iframe src="https://open.spotify.com/embed/track/2NFA9VtmvRBSBrsJyyx4OQ?si=soGsIq2tTt-a9VxgScexrg&context=spotify%3Aalbum%3A4T07AS6OKzpMp1EnM6zi1Q" width="98.5%" height="100" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
       </div>
     <div class="gallery-container fade-in">
+      <!-- Галерея з фото і відео -->
       <h2>Куток недоробленого челіка</h2>
        <div class="photo-grid">
       <div class="photo-item">
@@ -125,6 +164,7 @@
         <div class="photo-text">Я гарний серйозний</div>
       </div>
     </div>
+     <!-- Відео-блок -->
     <div class="video-grid">
       <div class="video-item">
         <video controls>
@@ -143,10 +183,12 @@
       </div>
     </div>
   </div>
+  <!-- Карта Google Maps -->
       <div class="about-map fade-in">
         <h2>Карта з місцем, де я навчаюсь:</h2>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.362621034562!2d24.011861876889448!3d49.83564363143995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7a31f0dccd%3A0x9869cc7025bc8e3f!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INGD0L3RltCy0LXRgNGB0LjRgtC10YIgItCb0YzQstGW0LLRgdGM0LrQsCDQn9C-0LvRltGC0LXRhdC90ZbQutCwIg!5e0!3m2!1suk!2sua!4v1757188579888!5m2!1suk!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <!-- Форма зворотного зв’язку -->
       <div class="contact-form-container fade-in">
   <h2>Зв'яжіться зі мною</h2>
   <form action="https://formspree.io/f/manpepqw" method="POST">
@@ -159,14 +201,16 @@
     </div>
   </main>
   
+<!-- Футер -->
 <footer class="site-footer fade-in">
   <p>© 2025 Мій сайт. Всі права захищені.</p>
   <p>
-    Email: <a href="mailto:andrian.saviak.pp@lpnu.ua">andrian.saviak.pp.2024@lpnu.ua</a> | 
+    Email: <a href="mailto:andrian.saviak.pp.2024@lpnu.ua">andrian.saviak.pp.2024@lpnu.ua</a> | 
     Телефон: <a href="tel:+38 097 119 31 34">+38 097 119 31 34</a>
   </p>
 </footer>
 
-<script src="script.js" defer></script>
+<!-- Підключення JS -->
+<script src="script.js"></script>
 </body>
 </html>

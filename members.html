@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+  <meta charset="UTF-8">
+  <!-- Автор та опис -->
+  <meta name="author" content="Андріан">
+  <meta name="description" content="Самостійна робота">
+
+  <!-- Заголовок вкладки -->
   <title>Склад гурту</title>
+  
+  <!-- Підключення шрифтів -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Підключення CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Іконка сайту -->
   <link rel="icon" href="icos/megadeth.ico" type="image/x-icon">
+
+  <!-- jQuery (для скриптів) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+  <!-- Відео-фон -->
 <video id="bg-video" class="bg-video" autoplay muted loop>
   <source src="backgroundvideos/main.mp4" type="video/mp4">
 </video>
+
+<!-- Шапка сайту -->
 <header>
+  <!-- Логотип -->
   <div class="logo fade-in">
     <a href="index.html">
     <img src="otherpictures/logo.png" alt="Лого">
     </a>
   </div>
 
+  <!-- Кнопка меню (для мобільної версії) -->
  <div class="menu-btn fade-in" id="menu-btn">
     <div></div>
     <div></div>
@@ -28,9 +47,12 @@
     <div></div>
   </div>
 
+  <!-- Головне меню -->
  <nav class="menu fade-in" id="menu">
     <a href="index.html">Головна</a>
     <a href="members.html">Склад гурту</a>
+
+    <!-- Випадаюче меню для альбомів -->
     <div class="dropdown" id="albums-dropdown">
       <a href="albums.html" class="dropbtn">Альбоми ▼</a>
       <div class="dropdown-content">
@@ -56,11 +78,12 @@
   </nav>
 </header>
 
-<body>
-
+<!-- Основний вміст -->
+ <main>
 <div class="container fade-in">
   <h1>Склад гурту</h1>
 
+  <!-- Засновники -->
   <h2>Засновники гурту</h2>
   <div class="founders">
     <div class="member">
@@ -73,6 +96,7 @@
     </div>
   </div>
 
+  <!-- Теперішній склад -->
   <h2>Теперішній склад групи</h2>
   <div class="current-members">
     <div class="member">
@@ -97,8 +121,11 @@
     </div>
   </div>
 
+  <!-- Колишні учасники -->
   <h2>Колишні учасники</h2>
 <div class="former-members">
+
+  <!-- Колонка "Гітара" -->
   <div class="column">
     <div class="member">Гітара</div>
     <p>Кері Кінґ (1984)</p>
@@ -114,6 +141,7 @@
     <p>Кіко Лоурейро (2015–2023)</p>
   </div>
 
+  <!-- Колонка "Бас-гітара" -->
   <div class="column">
     <div class="member">Бас-гітара</div>
     <p>Девід Еллефсон (1983–2002, 2010–2021)</p>
@@ -121,6 +149,7 @@
     <p>Джеймс Макдонау (2004–2006)</p>
   </div>
 
+  <!-- Колонка "Ударні" -->
   <div class="column">
     <div class="member">Ударні</div>
     <p>Діжон Каратерс (1983)</p>
@@ -134,13 +163,18 @@
   </div>
 </div>
 </div>
+ </main>
+
+<!-- Футер -->
 <footer class="site-footer fade-in">
   <p>© 2025 Мій сайт. Всі права захищені.</p>
   <p>
-    Email: <a href="mailto:andrian.saviak.pp@lpnu.ua">andrian.saviak.pp.2024@lpnu.ua</a> | 
+    Email: <a href="mailto:andrian.saviak.pp.2024@lpnu.ua">andrian.saviak.pp.2024@lpnu.ua</a> | 
     Телефон: <a href="tel:+38 097 119 31 34">+38 097 119 31 34</a>
   </p>
 </footer>
+
+<!-- Підключення JS -->
 <script src="script.js" defer></script>
 </body>
 </html>
